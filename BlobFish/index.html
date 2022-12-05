@@ -6,23 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/fontello.css">
+    <script src="js/burbujasInicio.js" defer></script>
+    <script src="js/selectorLvl.js" defer></script>
     <title>BlobFish Game</title>
 </head>
-<body>
+<body class="mitadAzul">
     
-    <div class="contenedor">
+    <div class="contenedor" id="contenedor">
 
         <h2>BlobFish Game</h2>
 
         <div class="selectorNivel">
             <div class="nivel">
-                <i class="icon-left-dir icon"></i>
-                <img src="https://picsum.photos/400/300" alt="Imagen de la difilcutad del nivel">
-                <i class="icon-right-dir icon"></i>
+                <i class="icon-left-dir icon" onclick="lvlMenos()" id="botonIzquierdo"></i>
+                <img alt="Imagen de la difilcutad del nivel" id="imgLvl" onclick="iniciarLvl()">
+                <i class="icon-right-dir icon" onclick="lvlMas()"id="botonDerecho"></i>
             </div>
 
-            <div class="seleccionado">
-                <i class="icon-circle elegido"></i>
+            <p class="nombreLvl" id="nombreLvl"></p>
+
+            <div class="seleccionado" id="seleccionado">
+                <i class="icon-circle"></i>
                 <i class="icon-circle"></i>
                 <i class="icon-circle"></i>
             </div>
@@ -40,3 +44,5 @@
 
 </body>
 </html>
+
+

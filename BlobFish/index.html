@@ -12,36 +12,35 @@
 </head>
 <body class="mitadAzul">
     
-    <div class="contenedor" id="contenedor">
+        <div class="contenedor" id="contenedor">
 
-        <h2>BlobFish Game</h2>
+            <h2>BlobFish Game</h2>
 
-        <div class="selectorNivel">
-            <div class="nivel">
-                <i class="icon-left-dir icon" onclick="lvlMenos()" id="botonIzquierdo"></i>
-                <img alt="Imagen de la difilcutad del nivel" id="imgLvl" onclick="iniciarLvl()">
-                <i class="icon-right-dir icon" onclick="lvlMas()"id="botonDerecho"></i>
+            <div class="selectorNivel">
+                <div class="nivel">
+                    <i class="icon-left-dir icon" id="botonIzquierdo"></i>
+                    <img alt="Imagen de la difilcutad del nivel" id="imgLvl">
+                    <i class="icon-right-dir icon" id="botonDerecho"></i>
+                </div>
+
+                <p class="nombreLvl" id="nombreLvl"></p>
+
+                <div class="seleccionado" id="seleccionado">
+                    <i class="icon-circle"></i>
+                    <i class="icon-circle"></i>
+                    <i class="icon-circle"></i>
+                </div>
+
             </div>
 
-            <p class="nombreLvl" id="nombreLvl"></p>
-
-            <div class="seleccionado" id="seleccionado">
-                <i class="icon-circle"></i>
-                <i class="icon-circle"></i>
-                <i class="icon-circle"></i>
+            <div class="ocean">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
             </div>
 
+            <span class="rellenoWave"></span>
         </div>
-
-        <div class="ocean">
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
-        </div>
-
-        <span class="rellenoWave"></span>
-    </div>
-
 </body>
 </html>
 

@@ -1,4 +1,18 @@
-const dificultadLvl = [{nombre: "Nivel Merluzo", cuadricula: 3}, {nombre: "Nivel Payaso", cuadricula: 5}, {nombre: "Nivel Blob", cuadricula: 7}];
+//Añadimos todos los eventos a los botones funcionales
+//--- Boton para la derecha
+let botonDer = document.getElementById("botonDerecho")
+botonDer.addEventListener("click", lvlMas)
+
+//Boton para la izquierda
+let botonIzq = document.getElementById("botonIzquierdo")
+botonIzq.addEventListener("click", lvlMenos)
+
+//Boton de iniciar en la foto
+let fotoIniciar = document.getElementById("imgLvl")
+fotoIniciar.addEventListener("click", iniciarLvl)
+
+//Nombre del nivel con el numero de cuadricula elevedado al cuadrado
+const dificultadLvl = [{nombre: "Nivel Merluzo", cuadricula: 3}, {nombre: "Nivel Payaso", cuadricula: 5}, {nombre: "Nivel BlobFish", cuadricula: 7}];
 
 //Ajustes para cuadno entres la primera vez o vuelves a esta página
 let contadorLvl = 1;
@@ -43,7 +57,7 @@ function lvlMenos() {
     }
 }
 
-//Funcion pata cambiar el lvl hacia el lado de la derecha
+//Funcion para cambiar el lvl hacia el lado de la derecha
 function lvlMas() {
     contadorLvl = contadorLvl + 1
     if (contadorLvl == 3) {
@@ -65,6 +79,8 @@ function lvlMas() {
 
 //Esta funcion inicia el lvl que se a seleccionado
 function iniciarLvl() {
+    localStorage.setItem("dif", contadorLvl)
+
     const iniciar = document.getElementById("contenedor")
     iniciar.classList.add("cargarPartida")
 
@@ -76,27 +92,4 @@ function iniciarLvl() {
     setTimeout(() => {
         window.open("lvl/lvl.html", "_self")
       }, 1600)
-}
-
-
-
-//------------------------------------------------------------------
-//Funciones para el diseño del lvl y la funcionalidad
-
-function generarCuadricula() {
-    
-    const contenedorCuadricula = document.getElementById("contenedorCuadricula")
-
-    for (let i = 0; i < 1; i++) {
-        let fila = document.createElement("span")
-        fila.classList.add("fila")
-
-        for (let x = 0; i < 7; x++) {
-            let cuadrado = document.createElement("span")
-            cuadrado.classList.add("cuadrado")
-            fila.appendChild(cuadrado)
-        }
-
-        contenedorCuadricula.appendChild(fila)
-    }
 }

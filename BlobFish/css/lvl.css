@@ -28,17 +28,6 @@
     padding: 1.5em;
 }
 
-.contenedorLvl h2 {
-    color: white;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 8vh;
-    margin: auto;
-    text-align: center;
-    font-size: 4rem;
-}
-
 .contenedorLvl .contenedorCuadricula .fila .cuadrado {
     width: 3rem;
     height: 3rem;
@@ -53,5 +42,12 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.iluminar {
+    width: 3rem;
+    height: 3rem;
+    background-color: greenyellow;
+    margin: 3px;
 }
 
